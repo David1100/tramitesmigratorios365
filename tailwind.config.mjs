@@ -38,7 +38,7 @@ export default {
       spacing: {
         'gutter': '24px',
         'unit': '8px',
-        'margin-mobile': '16px',
+        'margin-mobile': '12px',
         'margin-desktop': '64px',
         'container-max': '1200px'
       },
