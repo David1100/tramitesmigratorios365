@@ -1,0 +1,59 @@
+---
+const stories = [
+  {
+    initials: 'M.R.',
+    badge: 'Visa de Negocios - EE.UU.',
+    quote: '"Excelente gestión para mi visa L1. Todo el proceso fue claro y recibí apoyo constante en la entrevista."',
+    metric: 'Proceso en 15 días',
+    metricIcon: 'timer'
+  },
+  {
+    initials: 'A.G.',
+    badge: 'Residencia Nacional',
+    quote: '"Me ayudaron con todos los trámites de legalización. Profesionales y muy cumplidos con los tiempos."',
+    metric: 'Aprobado 1era Intento',
+    metricIcon: 'task_alt'
+  },
+  {
+    initials: 'L.P.',
+    badge: 'Visa de Turismo - Canadá',
+    quote: '"Pensé que mi caso era difícil, pero su revisión de documentos marcó la diferencia. Totalmente recomendados."',
+    metric: 'Trámite Express',
+    metricIcon: 'bolt'
+  },
+  {
+    initials: 'J.C.',
+    badge: 'Apostillas Masivas',
+    quote: '"Un alivio contar con ellos para mis documentos legales. Ahorré semanas de vueltas innecesarias."',
+    metric: '100% Sin Errores',
+    metricIcon: 'verified'
+  }
+];
+---
+
+<section class="py-24 bg-surface-container">
+  <div class="max-w-container-max mx-auto px-margin-desktop">
+    <div class="text-center mb-16">
+      <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Casos de Éxito</h2>
+      <div class="w-16 h-1 bg-secondary mx-auto"></div>
+      <p class="mt-6 font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        Conoce las experiencias de quienes ya hicieron realidad sus metas de viaje con nuestra asesoría.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+      {stories.map(story => (
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant flex flex-col h-full">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container font-bold">{story.initials}</div>
+            <span class="bg-secondary/10 text-secondary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter">{story.badge}</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface flex-grow italic mb-6">{story.quote}</p>
+          <div class="flex items-center gap-2 text-primary font-label-sm pt-4 border-t border-outline-variant/30">
+            <span class="material-symbols-outlined text-sm">{story.metricIcon}</span>
+            <span>{story.metric}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

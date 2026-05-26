@@ -1,0 +1,33 @@
+---
+const benefits = [
+  {
+    icon: 'verified',
+    title: 'Experiencia Certificada',
+    description: 'Más de 15 años liderando procesos migratorios exitosos.'
+  },
+  {
+    icon: 'speed',
+    title: 'Procesos Rápidos',
+    description: 'Optimizamos cada etapa para reducir tiempos de espera significativamente.'
+  },
+  {
+    icon: 'support_agent',
+    title: 'Atención Personalizada',
+    description: 'Un consultor dedicado para cada etapa de tu aplicación.'
+  }
+];
+---
+
+<section class="py-24 bg-primary text-on-primary">
+  <div class="max-w-container-max mx-auto px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      {benefits.map(benefit => (
+        <div class="text-center">
+          <span class="material-symbols-outlined text-5xl mb-4" style="font-variation-settings: 'FILL' 1">{benefit.icon}</span>
+          <h4 class="font-headline-md text-headline-md mb-2">{benefit.title}</h4>
+          <p class="font-body-md text-body-md text-on-primary-container">{benefit.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+---
+const reasons = [
+  {
+    icon: 'ph ph-lightbulb',
+    title: 'Enfoque Estratégico y Binacional',
+    description: 'Dominamos con la misma rigurosidad el ecosistema legal de Estados Unidos y Colombia. Diseñamos estrategias interconectadas.'
+  },
+  {
+    icon: 'ph ph-trend-up',
+    title: 'Consultoría de Alto Nivel',
+    description: 'Un trámite exitoso no depende de rellenar casillas, sino de la estrategia detrás del expediente.'
+  },
+  {
+    icon: 'ph ph-handshake',
+    title: 'Acompañamiento Continuo',
+    description: 'Atención boutique donde tu caso recibe la prioridad que merece. Nos mantenemos a tu lado de principio a fin.'
+  },
+  {
+    icon: 'ph ph-globe',
+    title: 'Soluciones Integrales',
+    description: 'Complementamos tu movilidad global con creación de estructuras corporativas, trámites notariales y apostillas.'
+  }
+];
+---
+
+<section id="why-us" class="py-24 bg-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute top-40 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-40 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+  </div>
+  <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full font-label-sm text-sm mb-4">
+        <i class="ph ph-star text-xl"></i>
+        CONFÍAN EN NOSOTROS
+      </span>
+      <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Por Qué Elegirnos</h2>
+      <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+      <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+        En un entorno legal complejo y en constante cambio, elegir el respaldo adecuado marca la diferencia entre el éxito de tu proceso o un retraso costoso.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {reasons.map((reason, i) => (
+        <div 
+          class="group relative bg-surface border border-outline-variant/50 p-8 rounded-2xl shadow-card hover:shadow-card-hover hover:border-primary/30 hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+          style={`animation-delay: ${i * 0.1}s`}
+        >
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="w-16 h-16 bg-primary/10 group-hover:bg-primary rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110">
+            <i class={`${reason.icon} text-3xl text-primary group-hover:text-white transition-colors duration-300`}></i>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-primary-dark transition-colors duration-300">{reason.title}</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">{reason.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

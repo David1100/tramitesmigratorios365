@@ -1,0 +1,25 @@
+---
+const badges = [
+  { icon: 'ph ph-shield', label: 'Datos Protegidos' },
+  { icon: 'ph ph-scales', label: 'Cumplimiento Legal' },
+  { icon: 'ph ph-globe', label: 'Alcance Global' }
+];
+---
+
+<section class="py-20 bg-surface">
+  <div class="max-w-container-max mx-auto px-margin-desktop text-center">
+    <div class="inline-block bg-primary/10 px-4 py-1 rounded-full text-primary font-label-sm mb-6 uppercase tracking-wider">Confianza y Resultados</div>
+    <h2 class="font-display-lg text-display-lg text-primary mb-4">Más de 2500 casos exitosos</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+      Nuestra reputación se basa en la transparencia y el éxito constante de nuestros clientes en todo el mundo.
+    </p>
+    <div class="flex flex-wrap justify-center items-center gap-12 opacity-60">
+      {badges.map(badge => (
+        <div class="flex items-center gap-2 hover:opacity-100 transition-opacity duration-300">
+          <i class={`${badge.icon} text-2xl`}></i>
+          <span class="font-label-md">{badge.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

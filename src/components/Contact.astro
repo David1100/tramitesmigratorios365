@@ -1,0 +1,134 @@
+---
+const features = [
+  { icon: 'ph ph-headset', label: 'Soporte 24/7' },
+  { icon: 'ph ph-scales', label: 'Asesoría Legal' },
+  { icon: 'ph ph-shield-check', label: 'Garantía de Confidencialidad' },
+  { icon: 'ph ph-clipboard-text', label: 'Revisión de Documentos' }
+];
+
+const serviceOptions = [
+  { value: 'peticion-familiar', label: 'Petición Familiar (I-130)' },
+  { value: 'ajuste-estatus', label: 'Ajuste de Estatus (I-485)' },
+  { value: 'remocion-condiciones', label: 'Remoción de Condiciones (I-751)' },
+  { value: 'naturalizacion', label: 'Naturalización (N-400)' },
+  { value: 'visa-prometido', label: 'Visa de Prometido (I-129F)' },
+  { value: 'autorizacion-empleo', label: 'Autorización de Empleo (I-765)' },
+  { value: 'constitucion-empresa', label: 'Constitución de Empresas' },
+  { value: 'nomada-digital', label: 'Visa de Nómada Digital' },
+  { value: 'visa-visitante', label: 'Visa de Visitante' },
+  { value: 'visa-migrante', label: 'Visa de Migrante' },
+  { value: 'cedula-extranjeria', label: 'Cédula de Extranjería' },
+  { value: 'apostilla', label: 'Apostilla de Documentos' },
+  { value: 'otro', label: 'Otro' }
+];
+---
+
+<section id="contact" class="py-24 bg-surface relative overflow-hidden">
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute top-20 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+  </div>
+  <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div class="space-y-8 animate-fade-in-up">
+        <div>
+          <span class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full font-label-sm text-sm mb-4">
+            <i class="ph ph-envelope text-xl"></i>
+            CONTACTO
+          </span>
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Agenda tu Consultoría Especializada</h2>
+          <p class="font-body-lg text-on-surface-variant leading-relaxed">
+            En VisaDirect entendemos que cada proceso migratorio es único. Nuestro equipo de expertos le guiará paso a paso, asegurando que toda su documentación cumpla con los más altos estándares legales.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {features.map(feature => (
+            <div class="group flex items-center gap-4 p-4 bg-white rounded-xl border border-outline-variant/50 hover:border-primary/30 hover:shadow-card hover:-translate-y-1 transition-all duration-300">
+              <div class="w-12 h-12 bg-primary/10 group-hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                <i class={`${feature.icon} text-2xl text-primary group-hover:text-white transition-colors`}></i>
+              </div>
+              <span class="font-label-md text-on-surface group-hover:text-primary transition-colors">{feature.label}</span>
+            </div>
+          ))}
+        </div>
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <p class="font-label-md text-on-surface-variant">O contáctanos directamente:</p>
+          <div class="flex gap-3">
+            <a 
+              href="https://wa.me/16506791659" 
+              target="_blank" 
+              rel="noopener"
+              class="group inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-xl font-label-md text-label-md font-semibold hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="ph ph-whatsapp-logo text-xl"></i>
+              WhatsApp
+            </a>
+            <a 
+              href="mailto:Tramitesm365@gmail.com" 
+              class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl font-label-md text-label-md font-semibold hover:bg-primary-dark hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="ph ph-envelope text-xl"></i>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-8 md:p-10 rounded-2xl shadow-card-hover border border-outline-variant/50 animate-fade-in-up" style="animation-delay: 0.2s;">
+        <form class="space-y-6" id="contact-form">
+          <div>
+            <label class="block font-label-sm text-on-surface mb-2" for="full-name">Nombre Completo</label>
+            <input 
+              class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3.5 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all hover:border-primary/50" 
+              id="full-name" 
+              placeholder="Ej. Juan Pérez" 
+              type="text"
+            />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-label-sm text-on-surface mb-2" for="email">Correo Electrónico</label>
+              <input 
+                class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3.5 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all hover:border-primary/50" 
+                id="email" 
+                placeholder="juan@ejemplo.com" 
+                type="email"
+              />
+            </div>
+            <div>
+              <label class="block font-label-sm text-on-surface mb-2" for="phone">Teléfono</label>
+              <input 
+                class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3.5 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all hover:border-primary/50" 
+                id="phone" 
+                placeholder="+1 (650) 000 0000" 
+                type="tel"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="block font-label-sm text-on-surface mb-2" for="service-type">Tipo de Trámite</label>
+            <select 
+              class="w-full bg-[#f8f9ff] border border-outline-variant rounded-xl px-4 py-3.5 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all hover:border-primary/50 appearance-none cursor-pointer" 
+              id="service-type"
+            >
+              <option value="">Selecciona un servicio...</option>
+              {serviceOptions.map(option => (
+                <option value={option.value}>{option.label}</option>
+              ))}
+            </select>
+          </div>
+          <button 
+            class="w-full bg-primary text-white font-headline-md py-4 rounded-xl shadow-button hover:shadow-button-hover hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex items-center justify-center gap-2" 
+            type="submit"
+          >
+            Enviar Solicitud
+            <i class="ph ph-paper-plane-tilt text-xl"></i>
+          </button>
+          <p class="font-label-sm text-on-surface-variant text-center flex items-center justify-center gap-2">
+            <i class="ph ph-lock text-xl"></i>
+            Respuesta garantizada en menos de 24 horas hábiles.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

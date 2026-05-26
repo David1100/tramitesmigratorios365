@@ -1,0 +1,83 @@
+---
+const servicesUSA = [
+  {
+    icon: 'ph ph-users',
+    title: 'Petición Familiar',
+    description: 'El primer paso para unir a tu familia. Gestionamos solicitudes de ciudadanos o residentes permanentes.',
+    form: 'I-130'
+  },
+  {
+    icon: 'ph ph-identification-card',
+    title: 'Ajuste de Estatus',
+    description: 'Obtén tu Residencia Permanente (Green Card) sin salir del país.',
+    form: 'I-485'
+  },
+  {
+    icon: 'ph ph-lock-open',
+    title: 'Remoción de Condiciones',
+    description: 'Eliminamos las restricciones temporales de tu residencia condicional por matrimonio.',
+    form: 'I-751'
+  },
+  {
+    icon: 'ph ph-medal',
+    title: 'Naturalización',
+    description: 'El paso final. Guiamos en requisitos y preparación para la entrevista de ciudadanía.',
+    form: 'N-400'
+  },
+  {
+    icon: 'ph ph-heart',
+    title: 'Visa de Prometido',
+    description: 'Para parejas que desean contraer matrimonio en EE.UU.',
+    form: 'I-129F'
+  },
+  {
+    icon: 'ph ph-briefcase',
+    title: 'Autorización de Empleo',
+    description: 'Trabaja legalmente en EE.UU. mientras tu proceso principal se tramita.',
+    form: 'I-765'
+  },
+  {
+    icon: 'ph ph-bank',
+    title: 'Constitución de Empresas',
+    description: 'LLC y C-Corp para emprendedores. Incluye EIN y Operating Agreement.',
+    form: 'EIN + LLC'
+  }
+];
+---
+
+<section id="services-usa" class="py-24 bg-white relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-full opacity-30">
+    <div class="absolute top-20 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+  </div>
+  <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full font-label-sm text-sm mb-4">
+        <i class="ph ph-airplane-takeoff text-xl"></i>
+        ESTADOS UNIDOS
+      </span>
+      <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Trámites Estados Unidos</h2>
+      <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+      <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        Dominamos los requisitos de USCIS para llevar tu caso al éxito
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {servicesUSA.map((service, i) => (
+        <div 
+          class="group bg-surface border border-outline-variant/50 p-6 rounded-2xl shadow-card hover:shadow-card-hover hover:border-primary/30 hover:-translate-y-2 transition-all duration-500"
+          style={`animation-delay: ${i * 0.1}s`}
+        >
+          <div class="w-14 h-14 bg-primary/10 group-hover:bg-primary rounded-xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110">
+            <i class={`${service.icon} text-2xl text-primary group-hover:text-white transition-colors duration-300`}></i>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-primary-dark transition-colors duration-300">{service.title}</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">{service.description}</p>
+          <span class="inline-flex items-center gap-1 bg-primary/10 text-primary text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider group-hover:bg-primary-dark group-hover:text-white transition-all duration-300">
+            <i class="ph ph-file-text text-sm"></i>
+            {service.form}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
